@@ -1,0 +1,223 @@
+/* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+body{
+    margin: 0px 30px 0px 30px;
+    padding: 0;
+    background-color: lightpink;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    }
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: aquamarine;
+    border: 4px solid black;
+    z-index: 1000;
+}
+
+        /* ===== НАВИГАЦИЯ ===== */
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            color: black;
+            font-size: 19px ;
+            text-decoration: none;
+            padding: 15px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+h1{
+    margin: 50px 0px 0px 0px;
+}
+main{
+    margin: 80px 0px 0px 0px;
+}
+#clean{
+    margin-top: 0px;
+}
+#diseases{
+    margin-top: 0px;
+}
+
+h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin-top: 0px;
+    font-size: clamp(20px, 3vw, 32px);
+}
+img{
+    width: 500px;
+    height: 500px;
+    margin: 0px 20px 0px 20px;
+    border: 3px solid olivedrab;
+    flex-wrap: nowrap;
+}
+#cage1{
+    width: 400px;
+    height: 400px;
+}
+#cage2{
+    float: right;
+    width: 600px;
+    height: 600px;
+
+}
+#Наполнитель{
+    float: left;
+    width: 400px;
+    height: 400px;
+}
+#Поилка{
+    float: right;
+    width: 130px;
+    height: 150px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+#Домик1{
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+#Домик{
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+#еда{
+    float: right;
+}
+#Rat{
+    float: left;
+}
+@media (max-width: 1024px){
+    img{
+        max-width: 400px;
+        max-height:500px;
+    }
+    #Домик{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            padding: 12px;
+            display: inline;
+        }
+        #Rat{
+            width: 300px;
+            height: 300px;
+        }    
+    }
+@media (max-width: 600px) {
+            /* Навигация — вертикально */
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        margin: 0;
+        }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        font-size: 16px;
+        }
+    .menu{
+    width: 100%;
+    background-color: #6fe7ff;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Надпись Меню */
+.menu-title{
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Сам список */
+.dropdown{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    /* Скрываем меню */
+    display: none;
+
+    position: absolute;
+    width: 100%;
+    background-color: #7ff0cf;
+    border: 3px solid black;
+}
+
+/* Пункты */
+.dropdown li{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Ссылки */
+.dropdown li a{
+    display: block;
+    padding: 18px;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* Эффект наведения */
+.dropdown li a:hover{
+    background-color: #62d9ba;
+}
+
+/* При наведении показываем меню */
+.menu:hover .dropdown{
+    display: block;
+}
+
+            /* Отступ под фиксированную шапку */
+    main {
+        padding-top: 180px;
+    }
+    img{
+        max-width: 300px;
+        max-height:300px;
+    }
+}
+
+ 

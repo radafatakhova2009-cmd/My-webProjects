@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To_Do</title>
+        <link rel="stylesheet" href="converter.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Конвертер валют</h1>
+            <form id="c-form">
+                <input type="number" id="amount" placeholder="Введите сумму">
+                <select id="from-currency"></select>
+                <select id="to-currency"></select>
+                <button type="submit">Convert/Конвертировать</button>
+            </form>
+            <p id="result"></p>
+
+            <hr>
+
+            <h2>История курса валют</h2>
+
+            <select id="period">
+                <option value="7">Неделя</option>
+                <option value="30">Месяц</option>
+                <option value="365">Год</option>
+            </select>
+
+            <button id="show-chart">Показать курс</button>
+
+            <canvas id="currencyChart"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+         <script src="java2.js"></script>
+    </body>
+</html>

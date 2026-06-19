@@ -1,0 +1,62 @@
+body{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    background-color: rgb(219, 255, 244);
+
+}
+.container{
+    background-color: rgb(87, 207, 255);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    width: 750px;       /* ширина */
+    max-width: 90%;     /* чтобы не ломалось на маленьких экранах */
+}
+h1{
+    margin-bottom: 20px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input,
+select,
+button{
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #090086;
+    border-radius: 5px;
+
+}
+button{
+    background-color: aquamarine;
+    color: blueviolet;
+    cursor: pointer;
+
+}
+
+#result{
+    margin-top: 20px ;
+    font-size: 1.2em;
+}
+canvas{
+    margin-top: 25px;
+    width: 100% !important;
+    height: 400px !important;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#show-chart{
+    margin-top:10px;
+}
+
+hr{
+    margin-top:20px;
+}

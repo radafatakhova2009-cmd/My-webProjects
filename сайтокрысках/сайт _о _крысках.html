@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Декоративные_крысы</title>
+    <style>
+        /* ===== CSS ПЕРЕМЕННЫЕ ===== */
+        :root {
+            --color-bg-start: #DA70D6;
+            --color-bg-end: #800080;
+            --color-header: aqua;
+            --color-header-border: #000;
+            --color-nav-link: #000;
+            --color-nav-link-size: 19px;
+            --color-text-main: rgb(0, 36, 134);
+            --color-text-green: rgb(0, 151, 8);
+            --color-text-brown: brown;
+            --color-text-aqua: aquamarine;
+            --color-section-bg: darkseagreen;
+            --color-footer-link: chartreuse;
+            --border-radius-img: 10%;
+            --img-border: 5px solid aqua;
+            --spacing-sm: 8px;
+            --spacing-md: 20px;
+            --spacing-lg: 40px;
+        }
+
+        /* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, var(--color-bg-start), var(--color-bg-end));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        /* ===== ШАПКА ===== */
+        header {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-header);
+            border-bottom: 4px solid var(--color-header-border);
+            z-index: 1000;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            color: var(--color-nav-link);
+            font-size: var(--color-nav-link-size);
+            text-decoration: none;
+            padding: 15px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== ОСНОВНОЕ СОДЕРЖИМОЕ ===== */
+        main {
+            margin: 0;
+            padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+            padding-top: 80px;
+        }
+
+        /* ===== ЗАГОЛОВКИ ===== */
+        h1 {
+            text-align: center;
+            margin: var(--spacing-lg) 0 var(--spacing-md);
+            font-size: clamp(24px, 5vw, 48px);
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            margin-top: 0;
+            font-size: clamp(20px, 3vw, 32px);
+        }
+
+        h3 {
+            font-size: clamp(32px, 6vw, 80px);
+        }
+
+        /* ===== ТЕКСТОВЫЙ БЛОК ===== */
+        .text {
+            background-color: var(--color-section-bg);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        p {
+            font-size: clamp(16px, 2.5vw, 25px);
+            color: var(--color-text-main);
+            line-height: 1.6;
+        }
+
+        /* ===== ИЗОБРАЖЕНИЯ ===== */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-img);
+            border: var(--img-border);
+            display: block;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .images-grid .rat,
+        .images-grid .rat2,
+        .images-grid .rat3 {
+            overflow: hidden;
+            border-radius: 10%;
+        }
+
+        .images-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10%;
+        }
+
+        /* ===== АНИМАЦИЯ ПРЫЖКА ===== */
+        .bounce-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: clamp(20px, 5vw, 300px);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .bounce {
+            width: 90px;
+            height: 90px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40%                      { transform: translateY(-150px); }
+            60%                      { transform: translateY(-70px); }
+        }
+
+        /* ===== ТАБЛИЦА ===== */
+        .table-container {
+            width: 95%;
+            margin: var(--spacing-lg) auto;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            min-width: 600px; /* горизонтальный скролл на маленьких экранах */
+        }
+
+        thead {
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+        }
+
+        th, td {
+            padding: 18px;
+            text-align: center;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        th {
+            font-size: 18px;
+        }
+
+        td {
+            font-size: 15px;
+        }
+
+        tbody tr:hover {
+            background-color: #ffeaf4;
+            transition: background-color 0.3s;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fff5fa;
+        }
+
+        table tr:last-child td:first-child { border-bottom-left-radius: 20px; }
+        table tr:last-child td:last-child  { border-bottom-right-radius: 20px; }
+
+        /* ===== ПОДВАЛ ===== */
+        .footer {
+            text-align: center;
+            padding: var(--spacing-md);
+        }
+
+        .footer a {
+            color: var(--color-footer-link);
+        }
+
+        /* ===== УТИЛИТЫ ===== */
+        .italic-green  { color: rgb(0, 151, 8); }
+        .italic-brown  { color: brown; }
+        .underline-aqua { color: aquamarine; }
+
+        /* ===================================================
+           АДАПТИВНОСТЬ
+        =================================================== */
+
+        /* --- ПЛАНШЕТ (600px – 900px) --- */
+        @media (max-width: 900px) {
+            th, td {
+                padding: 12px;
+                font-size: 13px;
+            }
+
+            .images-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .images-grid img {
+                height: 200px;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+
+        /* --- МОБИЛЬНЫЙ (до 600px) --- */
+        @media (max-width: 600px) {
+            /* Навигация — вертикально */
+            nav ul {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            nav ul li {
+                margin: 0;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 12px 16px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                font-size: 16px;
+            }
+
+            /* Отступ под фиксированную шапку */
+            main {
+                padding-top: 180px;
+            }
+
+            /* Изображения — одна колонка */
+            .images-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .images-grid img {
+                height: 220px;
+            }
+
+            /* Анимированная мышка — меньше отступ */
+            .bounce-wrapper {
+                justify-content: center;
+                padding-right: 0;
+            }
+
+            /* Таблица — горизонтальный скролл */
+            .table-container {
+                width: 100%;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Сайт_о_крысках_как ухаживать.html">Как ухаживать</a></li>
+                <li><a href="#rats">Подвиды</a></li>
+                <li><a href="Buy_rats.html">Купить</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Сайт о декоративных крысках</h1>
+
+        <div class="text">
+            <h2>Общие сведения.</h2>
+            <p>
+                <b>Декоративная крыса</b> — это одомашненная форма серой крысы (пасюка), обладающая высоким
+                <i class="italic-green">интеллектом, дружелюбным характером и разнообразием окрасов/типов шерсти</i>.
+                <br>
+                Живут 2–3 года, весят 250–700 г. Социальные животные, легко
+                <i class="italic-brown">поддаются дрессировке, привязываются к хозяину</i>.
+                Требуют <u class="underline-aqua">просторной</u> клетки и
+                <u class="underline-aqua">общения</u>, считаются
+                <u class="underline-aqua">чистоплотными</u> питомцами.
+            </p>
+            <p>
+                <b>Серая крыса (Пасюк)</b> — крупный грызун, длиной тела <i>20–30</i> см
+                <br>
+                (плюс хвост 15–20 см) и весом до 500 г, отличающийся плотным телосложением,
+                <i class="italic-brown">серо-бурым</i> мехом и коротким хвостом.
+            </p>
+        </div>
+
+        <!-- Анимированная мышка -->
+        <div class="bounce-wrapper">
+            <img class="bounce" src="img/Мышька.png" alt="mouse" width="90" height="90">
+        </div>
+
+        <!-- Галерея фотографий -->
+        <div class="images-grid">
+            <div class="rat">
+                <img src="img/Крыса1.jpg" alt="Крыска 1">
+            </div>
+            <div class="rat2">
+                <img src="img/Крыса 2.jpeg" alt="Крыска 2">
+            </div>
+            <div class="rat3">
+                <img src="img/Крыски1.jpg" alt="Милые крыски">
+            </div>
+        </div>
+
+        <section id="rats"><h1>Подвиды (породы крыс)</h1></section>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Порода</th>
+                        <th>Внешний вид</th>
+                        <th>Средний вес</th>
+                        <th>Длина тела</th>
+                        <th>Продолжительность жизни</th>
+                        <th>Особенности ухода</th>
+                        <th>Характер</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Стандартная</td>
+                        <td>Густая шерсть, длинный хвост, разные окрасы</td>
+                        <td>≈ 500 г</td>
+                        <td>до 20 см</td>
+                        <td>2–3 года</td>
+                        <td>Просторная клетка, питание и общение</td>
+                        <td>Ласковая и дружелюбная</td>
+                    </tr>
+                    <tr>
+                        <td>Рекс</td>
+                        <td>Кудрявая шерсть и закрученные усы</td>
+                        <td>200–600 г</td>
+                        <td>8–20 см</td>
+                        <td>2–3 года</td>
+                        <td>Тепло и уход за шерстью</td>
+                        <td>Любознательная и умная</td>
+                    </tr>
+                    <tr>
+                        <td>Мэнкс</td>
+                        <td>Без хвоста, крупные уши</td>
+                        <td>250–450 г</td>
+                        <td>20–25 см</td>
+                        <td>≈ 2 года</td>
+                        <td>Дополнительный уход из-за отсутствия хвоста</td>
+                        <td>Активная и общительная</td>
+                    </tr>
+                    <tr>
+                        <td>Сфинкс</td>
+                        <td>Без шерсти, розовая кожа</td>
+                        <td>350–700 г</td>
+                        <td>до 25 см</td>
+                        <td>6–12 месяцев</td>
+                        <td>Нуждается в тепле</td>
+                        <td>Добрая и ласковая</td>
+                    </tr>
+                    <tr>
+                        <td>Атласная</td>
+                        <td>Длинная блестящая шерсть</td>
+                        <td>300–500 г</td>
+                        <td>до 25 см</td>
+                        <td>2–3 года</td>
+                        <td>Следить за чистотой шерсти</td>
+                        <td>Спокойная и чистоплотная</td>
+                    </tr>
+                    <tr>
+                        <td>Дамбо</td>
+                        <td>Большие круглые уши</td>
+                        <td>250–500 г</td>
+                        <td>до 20 см</td>
+                        <td>2–3 года</td>
+                        <td>Не любит одиночество</td>
+                        <td>Преданная и дружелюбная</td>
+                    </tr>
+                    <tr>
+                        <td>Щетинистая</td>
+                        <td>Жесткая волнистая шерсть</td>
+                        <td>300–500 г</td>
+                        <td>до 20 см</td>
+                        <td>2–3 года</td>
+                        <td>Нужны прогулки и внимание</td>
+                        <td>Активная и контактная</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <h3>
+                <a href="https://youtu.be/a6IGkomPoHw?si=NgavYzDqFiA03xJX">
+                    Интересные факты про крысок
+                </a>
+            </h3>
+        </div>
+
+    </main>
+
+</body>
+</html>
