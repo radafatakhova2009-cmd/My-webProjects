@@ -1,35 +1,9 @@
 # Моё портфолио 
-
-Привет! Меня зовут Рада.  
-Мне 16, я акончила курс веб-разработки и хочу создавать красивые дизайны для сайтов.
-
-## Здесь есть:
-- ToDo приложение.
-- Конвертер валют.
-- Сайт о крысках.
-- Дизайн сайта для компании друга семьи.
-- Проекты HTML, CSS и JavaScript.
-
-## Инструменты работы:
-- HTML
-- CSS
-- JavaScript
-- Tilda
-- Figma
-
-## Цель:
-Стать хорошим веб-дизайнером.
-## Проекты:
-- [Сайт о себе на тильда](https://rada1.tilda.ws)
+- [Сайт на тильда](https://rada1.tilda.ws](https://rada1.tilda.ws/page151060993.html)
 - 
-- [Сайт о мультфильмах моего детства на Tilda](https://rada1.tilda.ws/page110479206.html)
-- 
-- [сайт о KazMinerals](https://rada1.tilda.ws/kazminerals)
-- 
-- [дизайн сайта для компании друга семьи в Figma](https://www.figma.com/design/cPHurl5mg9ih78M1epwYiI/Untitled?node-id=0-1&t=dNTsOw0lVBFeefP8-1)
-- 
-- [сайт портфолио в Figma](https://www.figma.com/design/xGlxDzUZ1H0xlP4Bx9XH7C/Untitled?t=NiOxkBEx4YzPc7h7-1)
-- 
-- [ToDo приложение](todo/ToDo.html)
-- [Конвертер валют](конвертер/index.html)
-- [Сайт о крысках](сайтокрысках/Buy_rats.html)
+- [Макет cайта на Figma desckopt](https://www.figma.com/design/xGlxDzUZ1H0xlP4Bx9XH7C/%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE?node-id=0-1&t=Xv2rdxdzYJgu9PHj-1)
+- [Макет cайта на Figma mobile](https://www.figma.com/design/xGlxDzUZ1H0xlP4Bx9XH7C/%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE?node-id=4-128&t=Xv2rdxdzYJgu9PHj-1)
+- [Рабочий прототип cайта на Figma](https://www.figma.com/proto/xGlxDzUZ1H0xlP4Bx9XH7C/%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE?node-id=1-2&t=kMOSjmLwNhDdZfpf-1)
+- [Рабочий прототип cайта на Figma mobile](https://www.figma.com/proto/xGlxDzUZ1H0xlP4Bx9XH7C/%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE?node-id=82-147&t=CwmxMqdO1YWCnlXz-1)
+  
+  
